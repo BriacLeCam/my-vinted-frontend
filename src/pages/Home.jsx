@@ -34,7 +34,7 @@ const Home = () => {
             <article>
               <div>
                 <img
-                  src={offer.owner.account.avatar.secure_url}
+                  src={offer.owner.account.avatar?.secure_url}
                   alt={offer.owner.account.username}
                 />
                 <span>{offer.owner.account.username}</span>
