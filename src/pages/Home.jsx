@@ -27,12 +27,12 @@ const Home = () => {
     <p>Loading...</p>
   ) : (
     <main>
-      <h1>Home</h1>
+      <div className="homepage-pic">***** Photo *****</div>
       {data.offers.map((offer) => {
         return (
           <Link key={offer._id} to={`/offers/${offer._id}`}>
-            <article>
-              <div>
+            <article className="card-container">
+              <div className="card-avatar-username">
                 <img
                   src={offer.owner.account.avatar?.secure_url}
                   alt={offer.owner.account.username}
