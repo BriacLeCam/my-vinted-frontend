@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .header-container {
@@ -77,9 +78,9 @@
 }
 
 .card-container {
-  display: flex;
   cursor: pointer;
   width: 235px;
+  overflow: hidden;
   padding: 0px 6px 16px 6px;
 }
 
@@ -111,4 +112,6 @@
   display: flex;
   flex-direction: column;
   padding: 8px;
+  text-decoration: none;
+  color: #999;
 }

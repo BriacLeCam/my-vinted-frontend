@@ -31,10 +31,10 @@ const Home = () => {
         <div>ça marche ?</div>
       </section>
       <section className="card-wrap">
-        <article className="card-container">
-          {data.offers.map((offer) => {
-            return (
-              <Link key={offer._id} to={`/offers/${offer._id}`}>
+        {data.offers.map((offer) => {
+          return (
+            <Link key={offer._id} to={`/offers/${offer._id}`}>
+              <article className="card-container">
                 <div className="card-avatar-username">
                   <img
                     src={offer.owner.account.avatar?.secure_url}
@@ -52,10 +52,10 @@ const Home = () => {
                   <p>{offer.product_details[1].TAILLE}</p>
                   <p>{offer.product_details[0].MARQUE}</p>
                 </div>
-              </Link>
-            );
-          })}
-        </article>
+              </article>
+            </Link>
+          );
+        })}
       </section>
     </main>
   );
