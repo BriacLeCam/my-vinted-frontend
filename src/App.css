@@ -73,13 +73,13 @@
   display: flex;
   flex-wrap: wrap;
   width: 1280px;
-  margin: 10px auto auto auto;
+  margin: 20px auto auto auto;
 }
 
 .card-container {
+  display: flex;
   cursor: pointer;
   width: 235px;
-  height: 485px;
   padding: 0px 6px 16px 6px;
 }
 
