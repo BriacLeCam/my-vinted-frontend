@@ -2,7 +2,7 @@ import logo from "../assets/images/vinted-logo.svg";
 import { Link } from "react-router-dom";
 
 // Je récupère en props le state token et la fonction handleToken
-const Header = ({ token, handleToken }) => {
+const Header = ({ token, handleToken, search, setSearch }) => {
   // const token = Cookies.get("vinted-token");
   // console.log(token);
 
@@ -11,7 +11,15 @@ const Header = ({ token, handleToken }) => {
       <div className="header-logo">
         <img src={logo} alt="vinted logo" />
       </div>
-      <div className="adev">***** à développer *****</div>
+      <input
+        placeholder="Recherche des articles"
+        type="text"
+        name="search"
+        value={search}
+        onChange={(event) => {
+          setSearch(event.target.value);
+        }}
+      />
       <section className="boutons">
         {/* Si token existe, c'est que je suis connecté, j'affiche le bouton déconnexion, sinon j'affiche les 2 autres boutons */}
         {token ? (

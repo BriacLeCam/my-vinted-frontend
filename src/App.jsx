@@ -17,7 +17,7 @@ function App() {
   // - Si je trouve un cookie token, ce cookie
   // - Sinon, null
   const [token, setToken] = useState(Cookies.get("vinted-token") || null);
-
+  const [search, setSearch] = useState("");
   // Cette fonction permet de stocker le token dans le state et dans les cookies ou supprimer le token dans le state et dans les cookies
   const handleToken = (token) => {
     if (token) {
@@ -30,7 +30,12 @@ function App() {
   };
   return (
     <Router>
-      <Header token={token} handleToken={handleToken} />
+      <Header
+        token={token}
+        handleToken={handleToken}
+        search={search}
+        setSearch={setSearch}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/" element={<Home />} />

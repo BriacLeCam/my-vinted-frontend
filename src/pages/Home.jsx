@@ -27,9 +27,7 @@ const Home = () => {
     <p>Loading...</p>
   ) : (
     <main>
-      <section className="homepage-pic">
-        <div>ça marche ?</div>
-      </section>
+      <section className="homepage-pic"></section>
       <section className="card-wrap">
         {data.offers.map((offer) => {
           return (
