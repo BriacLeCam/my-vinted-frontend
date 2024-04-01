@@ -33,26 +33,28 @@ const Home = () => {
       <section className="card-wrap">
         {data.offers.map((offer) => {
           return (
-            <Link key={offer._id} to={`/offers/${offer._id}`}>
-              <article className="card-container">
-                <div className="card-avatar-username">
-                  <img
-                    src={offer.owner.account.avatar?.secure_url}
-                    alt={offer.owner.account.username}
-                  />
-                  <span>{offer.owner.account.username}</span>
-                </div>
+            <Link
+              key={offer._id}
+              to={`/offers/${offer._id}`}
+              className="card-container"
+            >
+              <div className="card-avatar-username">
                 <img
-                  className="card-img"
-                  src={offer.product_image.secure_url}
-                  alt={offer.product_name}
+                  src={offer.owner.account.avatar?.secure_url}
+                  alt={offer.owner.account.username}
                 />
-                <div className="card-price-size-brand">
-                  <p>{offer.product_price} €</p>
-                  <p>{offer.product_details[1].TAILLE}</p>
-                  <p>{offer.product_details[0].MARQUE}</p>
-                </div>
-              </article>
+                <span>{offer.owner.account.username}</span>
+              </div>
+              <img
+                className="card-img"
+                src={offer.product_image.secure_url}
+                alt={offer.product_name}
+              />
+              <div className="card-price-size-brand">
+                <p>{offer.product_price} €</p>
+                <p>{offer.product_details[1].TAILLE}</p>
+                <p>{offer.product_details[0].MARQUE}</p>
+              </div>
             </Link>
           );
         })}

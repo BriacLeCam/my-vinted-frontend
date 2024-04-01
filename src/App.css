@@ -72,16 +72,20 @@
 
 .card-wrap {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 1280px;
-  margin: 20px auto auto auto;
+  margin: 30px auto auto auto;
 }
 
 .card-container {
+  /* border: solid crimson 1px; */
   cursor: pointer;
   width: 235px;
   overflow: hidden;
-  padding: 0px 6px 16px 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 16px;
 }
 
 .card-avatar-username {
@@ -103,9 +107,11 @@
 }
 
 .card-img {
+  /* border: solid blue 1px; */
   height: 360px;
   width: 235px;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .card-price-size-brand {
@@ -114,4 +120,8 @@
   padding: 8px;
   text-decoration: none;
   color: #999;
+}
+
+.offer-body {
+  background-color: #eaedee;
 }

@@ -33,7 +33,7 @@ const Offer = () => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <main>
+    <main className="offer-body">
       <h1>Offer</h1>
       <img src={data.product_image.secure_url} alt="" />
       <p>{data.product_price} €</p>
