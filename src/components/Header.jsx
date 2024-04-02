@@ -2,7 +2,7 @@ import logo from "../assets/images/vinted-logo.svg";
 import { Link } from "react-router-dom";
 
 // Je récupère en props le state token et la fonction handleToken
-const Header = ({ token, handleToken, search, setSearch }) => {
+const Header = ({ token, search, handleToken, setSearch }) => {
   // const token = Cookies.get("vinted-token");
   // console.log(token);
 
