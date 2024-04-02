@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ search }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -10,7 +10,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://lereacteur-vinted-api.herokuapp.com/offers"
+          `https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}`
         );
 
         // console.log(response.data);
@@ -21,7 +21,7 @@ const Home = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [search]);
 
   return isLoading ? (
     <p>Loading...</p>
@@ -37,10 +37,12 @@ const Home = () => {
               className="card-container"
             >
               <div className="card-avatar-username">
-                <img
-                  src={offer.owner.account.avatar?.secure_url}
-                  alt={offer.owner.account.username}
-                />
+                {offer.owner.account.avatar && (
+                  <img
+                    src={offer.owner.account.avatar?.secure_url}
+                    alt={offer.owner.account.username}
+                  />
+                )}
                 <span>{offer.owner.account.username}</span>
               </div>
               <img

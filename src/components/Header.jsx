@@ -18,6 +18,7 @@ const Header = ({ token, search, handleToken, setSearch }) => {
         value={search}
         onChange={(event) => {
           setSearch(event.target.value);
+          console.log(event.target.value);
         }}
       />
       <section className="boutons">
