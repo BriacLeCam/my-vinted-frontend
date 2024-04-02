@@ -13,7 +13,7 @@ const Home = ({ search }) => {
           `https://lereacteur-vinted-api.herokuapp.com/offers?title=${search}`
         );
 
-        // console.log(response.data);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {

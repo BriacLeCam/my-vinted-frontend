@@ -38,7 +38,7 @@ function App() {
         setSearch={setSearch}
       />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home search={search} />} />
         <Route path="/offers/:id" element={<Offer />} />
         <Route path="/signup" element={<Signup handleToken={handleToken} />} />
         <Route path="/login" element={<Login handleToken={handleToken} />} />
