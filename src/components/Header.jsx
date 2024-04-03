@@ -45,7 +45,9 @@ const Header = ({ token, search, handleToken, setSearch }) => {
         )}
       </section>
       <section>
-        <button className="boutontype2">vends tes article</button>
+        <Link to={token ? "/publish" : "/login"}>
+          <button className="boutontype2">vends tes article</button>
+        </Link>
       </section>
     </header>
   );
